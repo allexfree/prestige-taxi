@@ -1,0 +1,39 @@
+@import "general/variables.scss";
+@import "general/mixins.scss";
+
+.section-feedback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-feedback__text,
+.section-feedback__note {
+  margin: 0;
+}
+
+.section-feedback__text {
+  margin-bottom: 59px;
+  font-size: 21px;
+  line-height: 25px;
+}
+
+
+.section-feedback__note {
+  margin-bottom: 65px;
+  padding-right: 43px;
+  font-size: 12px;
+  font-weight: $bold;
+  line-height: 14px;
+  opacity: 0.7;
+}
+
+.section-feedback__link {
+  color: $fourth-color;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom-color 0.3s;
+  &:hover,
+  &:focus {
+    border-bottom: 1px solid $fourth-color;;
+  }
+}

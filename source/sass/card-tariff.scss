@@ -1,0 +1,86 @@
+@import "general/variables.scss";
+@import "general/mixins.scss";
+
+.card-tariff {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 280px;
+  max-width: 280px;
+  padding: 37px 0 96px;
+  border: 1px solid $eighth-color;
+  border-radius: 15px;
+  transition: 0.3s;
+  &:nth-child(2) {
+    .card-tariff__title {
+      padding-left: 29px;
+      svg {
+        left: 0;
+      }
+    }
+
+    .card-tariff__content {
+      padding-right: 24px;
+    }
+  }
+
+  &:nth-child(3) {
+    .card-tariff__title {
+      padding-left: 20px;
+      svg {
+        left: -10px;
+      }
+    }
+
+    .card-tariff__content {
+      padding-right: 24px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 0px 7px $eighth-color;
+  }
+}
+
+.card-tariff__title {
+  position: relative;
+  max-width: 100px;
+  margin: 0;
+  margin-bottom: 49px;
+  font-size: 21px;
+  font-weight: normal;
+  letter-spacing: 0.1em;
+  text-align: center;
+  svg {
+    position: absolute;
+    top: 50%;
+    left: -26px;
+    transform: translateY(-50%);
+  }
+}
+
+.card-tariff__content {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.card-tariff__group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-left: 25px;
+  font-size: 18px;
+  line-height: 21px;
+  dt {
+    margin-bottom: 15px;
+    text-align: right;
+  }
+
+  dd {
+    padding-left: 20px;
+    margin: 0;
+    color: $fourth-color;
+  }
+}

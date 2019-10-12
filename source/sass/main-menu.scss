@@ -1,0 +1,82 @@
+@import "general/variables.scss";
+@import "general/mixins.scss";
+
+.main-menu {
+  position: absolute;
+  top: 0;
+  left: -100vw;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(37, 37, 46, 0.97);
+  z-index: 1;
+  opacity: 0;
+  transition: 0.3s;
+  &--open {
+  left: 0;
+  opacity: 1;
+  }
+}
+
+.main-menu__list {
+  @include reset-list;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-menu__list-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 22px;
+  svg {
+    transition: opacity 0.3s;
+  }
+}
+
+.main-menu__list-link {
+  display: block;
+  font-size: 36px;
+  line-height: 42px;
+  & + svg {
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+
+  &:hover,
+  &:focus {
+    & + svg {
+      opacity: 1;
+    }
+  }
+}
+
+.main-menu__btn-close {
+  display: block;
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  border: 5px dashed transparent;
+  border-image: linear-gradient($fourth-color, $fourth-color);
+  border-radius: 30px;
+  background-color: transparent;
+  transform: translate(320px, 40px);
+  opacity: 0.65;
+  transition: opacity 0.3s;
+  span {
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-color: $fifth-color;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}

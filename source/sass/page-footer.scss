@@ -1,0 +1,39 @@
+@import "general/variables.scss";
+@import "general/mixins.scss";
+
+.page-footer {
+  background-color: $second-color;
+  opacity: 0.5;
+  font-size: 12px;
+  a:not(.logo) {
+    border-bottom: 1px solid transparent;
+    transition: border-bottom-color 0.3s;
+    &:hover,
+    &:focus {
+      border-bottom: 1px solid $first-color;
+    }
+  }
+}
+
+.page-footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.page-footer__list {
+  @include reset-list;
+  display: flex;
+}
+
+.page-footer__list-item {
+  margin-right: 15px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.page-footer__list-text {
+  margin: 0;
+}

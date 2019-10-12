@@ -1,0 +1,16 @@
+@import "general/variables.scss";
+@import "general/mixins.scss";
+
+.about {
+  margin-bottom: 86px;
+}
+
+.about__text {
+  font-size: 21px;
+  line-height: 25px;
+  text-align: center;
+}
+
+.about__text-accent {
+  color: $fourth-color;
+}

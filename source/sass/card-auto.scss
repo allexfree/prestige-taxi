@@ -1,0 +1,63 @@
+@import "general/variables.scss";
+@import "general/mixins.scss";
+
+.card-auto {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  padding: 20px 15px;
+  background-color: $tenth-color;
+  border-radius: 15px;
+  transition: background-color 0.3s;
+  &:hover,
+  &:focus {
+    background-color: $eleventh-color;
+  }
+
+  &:nth-child(2) {
+    figure {
+      padding-top: 81px;
+      margin-bottom: 78px;
+    }
+
+    figcaption {
+      padding-top: 17px;
+      text-align: center;
+    }
+
+    .card-auto__btn {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.card-auto__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  figure {
+    margin: 0;
+    margin-bottom: 52px;
+    &:last-child {
+      margin-bottom: 0;
+      figcaption {
+        text-align: right;
+      }
+    }
+  }
+}
+
+.card-auto__btn {
+  padding: 15.5px 0;
+  margin-bottom: 53px;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  font-weight: $bold;
+  color: $sixth-color;
+  text-align: center;
+  background-image: linear-gradient($fifth-color, $fourth-color);
+  &:hover,
+  &:focus {
+    color: $first-color;
+  }
+}

@@ -1,0 +1,114 @@
+@import "general/variables.scss";
+@import "general/mixins.scss";
+
+.page-header {
+  position: relative;
+  padding-bottom: 256px;
+  &--conf {
+    padding-bottom: 100px;
+  }
+}
+
+.page-header__topline {
+  background-color: rgba(1, 1, 1, 0.5);
+  box-shadow: 0px 10px 10px $third-color;
+}
+
+.page-header__topline-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 0;
+}
+
+.page-header__text {
+  margin: 0;
+  font-size: 16px;
+}
+
+.page-header__btn-callback {
+  padding: 1px;
+  background-image: linear-gradient($fifth-color, $fourth-color);
+  span {
+    display: block;
+    padding: 14.5px 0;
+    font-size: 12px;
+    font-weight: $bold;
+    text-align: center;
+    background-color: $ninth-color;
+    border-radius: 29px;
+    transition: color 0.3s;
+  }
+
+  &:hover,
+  &:focus {
+    span {
+      color: $seventh-color;
+    }
+  }
+}
+
+.page-header__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-top: 141px;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 140px;
+    right: -107px;
+    display: block;
+    width: 817px;
+    height: 377px;
+    background-image: url("../img/header-pseudo-img@desktop1x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    @include pixel-ratio(double) {
+      background-image: url("../img/header-pseudo-img@desktop2x.png");
+    }
+  }
+}
+
+.page-header__title {
+  max-width: 360px;
+  margin: 0;
+  margin-bottom: 26px;
+  padding-left: 19px;
+  font-size: 36px;
+  font-weight: normal;
+  line-height: 42px;
+}
+
+.page-header__list {
+  @include reset-list;
+  padding-left: 45px;
+  margin-bottom: 60px;
+}
+
+.page-header__list-item {
+  position: relative;
+  margin-bottom: 9px;
+  font-size: 18px;
+  opacity: 0.8;
+  svg {
+    position: absolute;
+    top: 6px;
+    left: -29px;
+  }
+}
+
+.page-header__btn-cta {
+  padding: 15.5px 0;
+  margin-left: 18px;
+  font-size: 12px;
+  font-weight: $bold;
+  color: $sixth-color;
+  text-align: center;
+  background-image: linear-gradient($fifth-color, $fourth-color);
+  &:hover,
+  &:focus {
+    color: $first-color;
+  }
+}

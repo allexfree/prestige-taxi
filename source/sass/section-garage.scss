@@ -1,0 +1,20 @@
+@import "general/variables.scss";
+@import "general/mixins.scss";
+
+.garage {
+  margin-bottom: 96px;
+}
+
+.garage__title {
+  margin: 0;
+  margin-bottom: 56px;
+  font-size: 36px;
+  line-height: 42px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.garage__content {
+  display: flex;
+  justify-content: space-between;
+}

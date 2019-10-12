@@ -1,0 +1,36 @@
+@import "general/variables.scss";
+@import "general/mixins.scss";
+
+.page-main--conf {
+  article {
+    margin-bottom: 100px;
+  }
+
+  h6 {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  p:first-of-type {
+    a {
+      color: $fourth-color;
+      border-bottom: 1px solid transparent;
+      transition: border-bottom-color 0.3s;
+      &:hover,
+      &:focus {
+        border-bottom: 1px solid $fourth-color;
+      }
+    }
+  }
+
+  p:last-of-type {
+    a {
+      text-decoration: underline;
+      transition: opacity 0.3s;
+      &:hover,
+      &:focus {
+        opacity: 0.7;
+      }
+    }
+  }
+}
