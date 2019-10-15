@@ -7,15 +7,21 @@
   left: -100vw;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   width: 100%;
   height: 100vh;
   background-color: rgba(37, 37, 46, 0.97);
-  z-index: 1;
+  z-index: 10;
   opacity: 0;
   transition: 0.3s;
+  overflow-y: auto;
   &--open {
   left: 0;
   opacity: 1;
+  }
+
+  @include media-xs {
+    padding: 0 15px;
   }
 }
 
@@ -34,6 +40,10 @@
   svg {
     transition: opacity 0.3s;
   }
+
+  @include media-md {
+    justify-content: center;
+  }
 }
 
 .main-menu__list-link {
@@ -46,6 +56,10 @@
     left: -30px;
     transform: translateY(-50%);
     opacity: 0;
+
+    @include media-xs {
+      left: -5px;
+    }
   }
 
   &:hover,
@@ -53,6 +67,28 @@
     & + svg {
       opacity: 1;
     }
+  }
+
+  @include media-xl {
+    font-size: 34px;
+    line-height: normal;
+  }
+
+  @include media-lg {
+    font-size: 31px;
+  }
+
+  @include media-md {
+    font-size: 28px;
+  }
+
+  @include media-sm {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  @include media-xs {
+    max-width: 280px;
   }
 }
 
@@ -78,5 +114,25 @@
   &:hover,
   &:focus {
     opacity: 1;
+  }
+
+  @include media-xl {
+    position: absolute;
+    top: 0;
+    right: 2%;
+    transform: translate(0, 40px);
+  }
+
+  @include media-md {
+    top: 28px;
+    transform: translate(0, 0);
+  }
+
+  @include media-sm {
+    right: 3%;
+  }
+
+  @include media-xs {
+    right: 5%;
   }
 }

@@ -10,6 +10,21 @@
     padding: 0;
     margin: 0;
     border: none;
+    @include media-md {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+
+  @include media-lg {
+    justify-content: space-between;
+    margin-bottom: 37px;
+  }
+
+  @include media-md {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 
@@ -18,11 +33,15 @@
   flex-direction: column;
   width: 250px;
   margin-right: 70px;
-}
+  @include media-lg {
+    margin-right: 1%;
+  }
 
-.main-feedback-form__input {
-  &:last-child {
-    margin-bottom: 0;
+  @include media-md {
+    align-items: center;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 15px;
   }
 }
 
@@ -41,6 +60,26 @@
   }
 }
 
+.main-feedback-form__input {
+  display: block;
+  width: 100%;
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include media-lg {
+    margin-bottom: 15px;
+  }
+
+  @include media-md {
+    width: 80%;
+  }
+
+  @include media-xs {
+    width: 100%;
+  }
+}
+
 .main-feedback-form__textarea {
   align-self: flex-start;
   width: calc(100% - 430px);
@@ -48,6 +87,20 @@
   margin-bottom: 0;
   padding-bottom: 72px;
   resize: none;
+  @include media-lg {
+    width: 35%;
+    margin-right: 0;
+    padding-bottom: 61px;
+  }
+
+  @include media-md {
+    width: 80%;
+    margin-bottom: 30px;
+  }
+
+  @include media-xs {
+    width: 100%;
+  }
 }
 
 .main-feedback-form__btn {
@@ -85,6 +138,14 @@
   padding: 75px 45px;
   background-color: $third-color;
   border-radius: 15px;
+  @include media-md {
+    max-width: 480px;
+    padding: 45px 25px;
+  }
+
+  @include media-xs {
+    padding: 55px 15px;
+  }
 }
 
 .form-callback__wrapper {
@@ -101,6 +162,11 @@
   font-weight: $bold;
   line-height: 28px;
   text-align: center;
+  @include media-md {
+    font-size: 18px;
+    line-height: normal;
+    margin-bottom: 35px;
+  }
 }
 
 .form-callback__input {
@@ -115,6 +181,9 @@
   background-color: $tenth-color;
   &:last-of-type {
     margin-bottom: 40px;
+    @include media-md {
+      margin-bottom: 30px;
+    }
   }
 }
 
@@ -148,6 +217,10 @@
       color: $thirteenth-color;
     }
   }
+
+  @include media-md {
+    margin-bottom: 30px;
+  }
 }
 
 .form-callback__group {
@@ -164,6 +237,10 @@
     &:hover,
     &:focus {
       border-bottom: 1px solid $fourth-color;
+    }
+
+    @include media-md {
+      font-size: 12px;
     }
   }
 

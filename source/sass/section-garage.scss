@@ -3,6 +3,9 @@
 
 .garage {
   margin-bottom: 96px;
+  @include media-sm {
+    margin-bottom: 50px;
+  }
 }
 
 .garage__title {
@@ -12,9 +15,34 @@
   line-height: 42px;
   font-weight: normal;
   text-align: center;
+  @include media-xl {
+    font-size: 34px;
+    line-height: normal;
+  }
+
+  @include media-lg {
+    font-size: 31px;
+  }
+
+  @include media-sm {
+    font-size: 24px;
+  }
+
+  @include media-sm {
+    margin-bottom: 30px;
+  }
 }
 
 .garage__content {
   display: flex;
   justify-content: space-between;
+  @include media-md {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  @media (max-width: 595px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }

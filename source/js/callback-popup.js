@@ -17,6 +17,12 @@
           } else {
             this.st.focus = '.input-name-js';
           }
+
+          if ($(window).width() < 769 && $('.form-callback').hasClass('lightSpeedIn')) {
+            $('.form-callback').removeClass('lightSpeedIn');
+          } else {
+            $('.form-callback').addClass('lightSpeedIn');
+          }
         }
       }
     });

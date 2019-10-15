@@ -3,12 +3,27 @@
 
 .about {
   margin-bottom: 86px;
+  @include media-xs {
+    margin-bottom: 50px;
+  }
 }
 
 .about__text {
   font-size: 21px;
   line-height: 25px;
   text-align: center;
+  @include media-xl {
+    font-size: 20px;
+    line-height: normal;
+  }
+
+  @include media-lg {
+    font-size: 18px;
+  }
+
+  @include media-sm {
+    font-size: 14px;
+  }
 }
 
 .about__text-accent {

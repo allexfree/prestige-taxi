@@ -16,6 +16,23 @@
   margin-bottom: 59px;
   font-size: 21px;
   line-height: 25px;
+  @include media-xl {
+    font-size: 20px;
+    line-height: normal;
+  }
+
+  @include media-lg {
+    font-size: 18px;
+  }
+
+  @include media-md {
+    text-align: center;
+  }
+
+  @include media-sm {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
 }
 
 
@@ -26,6 +43,14 @@
   font-weight: $bold;
   line-height: 14px;
   opacity: 0.7;
+  @include media-lg {
+    text-align: center;
+    padding-right: 0;
+  }
+
+  @include media-xs {
+    margin-bottom: 30px;
+  }
 }
 
 .section-feedback__link {

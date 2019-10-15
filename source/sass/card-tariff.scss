@@ -8,6 +8,8 @@
   width: 280px;
   max-width: 280px;
   padding: 37px 0 96px;
+  margin-right: 0.5%;
+  margin-bottom: 0.5%;
   border: 1px solid $eighth-color;
   border-radius: 15px;
   transition: 0.3s;
@@ -25,6 +27,7 @@
   }
 
   &:nth-child(3) {
+    margin-right: 0;
     .card-tariff__title {
       padding-left: 20px;
       svg {
@@ -40,6 +43,23 @@
   &:hover,
   &:focus {
     box-shadow: 0px 0px 7px $eighth-color;
+  }
+
+  @media (max-width: 900px) {
+    width: 40%;
+    max-width: 40%;
+  }
+
+  @include media-md {
+    min-width: 280px;
+  }
+
+  @include media-sm {
+    padding-bottom: 89px;
+  }
+
+  @include media-xs {
+    margin-bottom: 15px;
   }
 }
 
@@ -58,12 +78,26 @@
     left: -26px;
     transform: translateY(-50%);
   }
+
+  @include media-lg {
+    font-size: 18px;
+  }
+
+  @include media-sm {
+    margin-bottom: 70px;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
 }
 
 .card-tariff__content {
   display: flex;
   flex-direction: column;
   margin: 0;
+  @include media-sm {
+    width: 100%;
+    align-items: center;
+  }
 }
 
 .card-tariff__group {
@@ -82,5 +116,16 @@
     padding-left: 20px;
     margin: 0;
     color: $fourth-color;
+  }
+
+  @include media-lg {
+    font-size: 16px;
+    line-height: normal;
+  }
+
+  @include media-sm {
+    width: 100%;
+    padding-left: 0;
+    font-size: 14px;
   }
 }

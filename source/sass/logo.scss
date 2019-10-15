@@ -1,6 +1,14 @@
 @import "general/variables.scss";
 @import "general/mixins.scss";
 
+.logo {
+  @include media-lg {
+    img {
+      width: 100px;
+    }
+  }
+}
+
 .logo--footer {
   display: flex;
   align-items: center;
@@ -11,5 +19,11 @@
 
   span {
     align-self: flex-end;
+  }
+
+  @include media-lg {
+    img {
+      width: 70px;
+    }
   }
 }

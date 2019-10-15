@@ -2,8 +2,15 @@
 @import "general/mixins.scss";
 
 .tariffs-in {
+  display: flex;
+  flex-direction: column;
+  padding-top: 8px;
   padding-top: 0;
   margin-bottom: 91px;
+  @include media-sm {
+    align-items: center;
+    margin-bottom: 50px;
+  }
 }
 
 .tariffs-in__title {
@@ -13,6 +20,19 @@
   line-height: 42px;
   font-weight: normal;
   text-align: center;
+  @include media-xl {
+    font-size: 34px;
+    line-height: normal;
+  }
+
+  @include media-lg {
+    font-size: 31px;
+  }
+
+  @include media-sm {
+    margin-bottom: 30px;
+    font-size: 24px;
+  }
 }
 
 .tariffs-in__content {
@@ -20,6 +40,17 @@
   justify-content: space-between;
   flex-wrap: wrap;
   margin-bottom: 42px;
+  @media (max-width: 900px) {
+    justify-content: center;
+  }
+
+  @include media-sm {
+    margin-bottom: 22px;
+  }
+
+  @include media-xs {
+    margin-bottom: 10px;
+  }
 }
 
 .tariffs-in__feature {
@@ -30,5 +61,20 @@
   text-align: center;
   span {
     color: $fourth-color;
+  }
+
+  @include media-lg {
+    font-size: 16px;
+    line-height: normal;
+  }
+
+  @include media-sm {
+    max-width: 90%;
+    padding-left: 0;
+    font-size: 14px;
+  }
+
+  @include media-xs {
+    margin: 0;
   }
 }

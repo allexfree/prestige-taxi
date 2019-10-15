@@ -566,4 +566,9 @@ button {
     background-color: $fifth-color;
     transform: translate(-50%, -50%);
   }
+
+  @include media-xs {
+    top: 15px;
+    right: 15px;
+  }
 }

@@ -6,12 +6,19 @@
   flex-direction: column;
   width: 280px;
   padding: 20px 15px;
+  margin-right: 1%;
   background-color: $tenth-color;
   border-radius: 15px;
   transition: background-color 0.3s;
   &:hover,
   &:focus {
     background-color: $eleventh-color;
+  }
+
+  &:nth-child(1) {
+    @media (max-width: 595px) {
+      margin-right: 0;
+    }
   }
 
   &:nth-child(2) {
@@ -28,6 +35,26 @@
     .card-auto__btn {
       margin-bottom: 0;
     }
+
+    @include media-md {
+      order: 1;
+    }
+
+    @media (max-width: 595px) {
+      margin-right: 0;
+    }
+  }
+
+  &:nth-child(3) {
+    margin-right: 0;
+  }
+
+  @include media-md {
+    margin-bottom: 1%;
+  }
+
+  @media (max-width: 595px) {
+    margin-bottom: 15px;
   }
 }
 

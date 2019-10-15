@@ -26,55 +26,61 @@
 
 <body>
 
+  <nav class="main-menu menu-js">
+    <ul class="main-menu__list">
+      <li class="main-menu__list-item">
+        <a href="#tariff" class="main-menu__list-link">Тарифы</a>
+        <svg width="15" height="10">
+          <use xlink:href="img/sprite/sprite.svg#list-marker"></use>
+        </svg>
+      </li>
+      <li class="main-menu__list-item">
+        <a href="#about" class="main-menu__list-link">О компании</a>
+        <svg width="15" height="10">
+          <use xlink:href="img/sprite/sprite.svg#list-marker"></use>
+        </svg>
+      </li>
+      <li class="main-menu__list-item">
+        <a href="#garage" class="main-menu__list-link">Автопарк</a>
+        <svg width="15" height="10">
+          <use xlink:href="img/sprite/sprite.svg#list-marker"></use>
+        </svg>
+      </li>
+      <li class="main-menu__list-item">
+        <a href="#feedback" class="main-menu__list-link">Обратная связь</a>
+        <svg width="15" height="10">
+          <use xlink:href="img/sprite/sprite.svg#list-marker"></use>
+        </svg>
+      </li>
+      <li class="main-menu__list-item">
+        <a href="conf.html" class="main-menu__list-link">Политика конфиденциальности</a>
+        <svg width="15" height="10">
+          <use xlink:href="img/sprite/sprite.svg#list-marker"></use>
+        </svg>
+      </li>
+    </ul>
+    <button class="main-menu__btn-close btn-close-menu-js" type="button" aria-label="Закрыть меню">
+      <span></span>
+    </button>
+  </nav>
   <header class="page-header">
-
-    <nav class="main-menu menu-js">
-      <ul class="main-menu__list">
-        <li class="main-menu__list-item">
-          <a href="#tariff" class="main-menu__list-link">Тарифы</a>
-          <svg width="15" height="10">
-            <use xlink:href="img/sprite/sprite.svg#list-marker"></use>
-          </svg>
-        </li>
-        <li class="main-menu__list-item">
-          <a href="#about" class="main-menu__list-link">О компании</a>
-          <svg width="15" height="10">
-            <use xlink:href="img/sprite/sprite.svg#list-marker"></use>
-          </svg>
-        </li>
-        <li class="main-menu__list-item">
-          <a href="#garage" class="main-menu__list-link">Автопарк</a>
-          <svg width="15" height="10">
-            <use xlink:href="img/sprite/sprite.svg#list-marker"></use>
-          </svg>
-        </li>
-        <li class="main-menu__list-item">
-          <a href="#feedback" class="main-menu__list-link">Обратная связь</a>
-          <svg width="15" height="10">
-            <use xlink:href="img/sprite/sprite.svg#list-marker"></use>
-          </svg>
-        </li>
-        <li class="main-menu__list-item">
-          <a href="conf.html" class="main-menu__list-link">Политика конфиденциальности</a>
-          <svg width="15" height="10">
-            <use xlink:href="img/sprite/sprite.svg#list-marker"></use>
-          </svg>
-        </li>
-      </ul>
-      <button class="main-menu__btn-close btn-close-menu-js" type="button" aria-label="Закрыть меню">
-        <span></span>
-      </button>
-    </nav>
 
     <div class="page-header__topline">
       <div class="container">
         <div class="page-header__topline-wrapper">
-          <a class="logo">
-            <img src="img/icons/logo.svg" width="119" height="25" alt="Логотип Prestige taxi">
-          </a>
+          <div class="page-header__logo-wrapper">
+            <a class="logo">
+              <img src="img/icons/logo.svg" width="119" height="25" alt="Логотип Prestige taxi">
+            </a>
+          </div>
           <p class="page-header__text">На всех тарифах действует предзаказ по телефону</p>
-          <a class="page-header__link-phone" href="tel:+79119065255">+7 911 906-52-55</a>
-          <a class="btn-common page-header__btn-callback callback-btn-js" href="#callback"><span>Заказать звонок</span></a>
+          <div class="page-header__link-wrapper">
+            <a class="page-header__link-phone" href="tel:+79119065255">+7 911 906-52-55</a>
+          </div>
+          <div class="page-header__btn-wrapper">
+            <a class="btn-common page-header__btn-callback callback-btn-js" href="#callback"><span>Заказать
+                звонок</span></a>
+          </div>
           <button class="burger-menu__btn btn-open-menu-js" type="button" aria-label="Открыть меню">
             <span></span>
             <span></span>
@@ -98,7 +104,7 @@
               <use xlink:href="img/sprite/sprite.svg#list-marker"></use>
             </svg>
           </li>
-          <li class="page-header__list-item">Все авто не старше 3х лет
+          <li class="page-header__list-item">Все автомобили не старше 3х лет
             <svg width="15" height="10">
               <use xlink:href="img/sprite/sprite.svg#list-marker"></use>
             </svg>
@@ -347,6 +353,7 @@
   <footer class="page-footer">
     <div class="container">
       <div class="page-footer__wrapper">
+          <div class="page-footer__logo-wrapper">
         <a class="logo logo--footer">
           <svg width="8" height="8">
             <use xlink:href="img/sprite/sprite.svg#copyright"></use>
@@ -354,6 +361,7 @@
           <img src="img/icons/logo.svg" width="70" height="14" alt="Логотип Prestige taxi">
           <span>, 2019</span>
         </a>
+      </div>
 
         <ul class="page-footer__list">
           <li class="page-footer__list-item">
@@ -387,18 +395,25 @@
         <input type="hidden" name="admin_email" value="allexfree@yandex.ru">
         <input type="hidden" name="form_subject" value="Сообщение с сайта">
 
-        <input class="form-callback__input input-name-js" type="text" name="Имя" pattern="(^[a-zа-яA-ZА-Я][a-zа-яA-ZА-Я0-9-_\.\s]{1,20}$)" placeholder="Введите Ваше имя">
-        <input class="form-callback__input" type="tel" name="Номер телефона" pattern="(\+?\d[- .]*){7,13}" placeholder="Введите Ваш номер телефона" required>
+        <input class="form-callback__input input-name-js" type="text" name="Имя"
+          pattern="(^[a-zа-яA-ZА-Я][a-zа-яA-ZА-Я0-9-_\.\s]{1,20}$)" placeholder="Введите Ваше имя">
+        <input class="form-callback__input" type="tel" name="Номер телефона" pattern="(\+?\d[- .]*){7,13}"
+          placeholder="Введите Ваш номер телефона" required>
 
-        <button class="btn-common form-callback__btn btn-callback-js" type="submit" disabled><span>Отправить</span></button>
+        <button class="btn-common form-callback__btn btn-callback-js" type="submit"
+          disabled><span>Отправить</span></button>
 
         <div class="form-callback__group">
           <input id="checkbox-input" class="form-callback__input-checkbox" type="checkbox">
-          <label class="form-callback__label" for="checkbox-input">С <a href="conf.html" target="_blank" rel="noopener">политикой конфиденциальности</a> ознакомлен(а) и даю свое согласие на обработку моих персональных данных</label>
+          <label class="form-callback__label" for="checkbox-input">С <a href="conf.html" target="_blank"
+              rel="noopener">политикой конфиденциальности</a> ознакомлен(а) и даю свое согласие на обработку моих
+            персональных данных</label>
         </div>
       </div>
     </form>
   </div>
+
+  <!-- <script defer type="text/javascript" src="https://spikmi.com/Widget?Id=1857"></script> -->
 
 
   <link rel="stylesheet" href="css/style.min.css">
