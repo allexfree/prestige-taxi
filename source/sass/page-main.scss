@@ -1,6 +1,11 @@
 @import "general/variables.scss";
 @import "general/mixins.scss";
 
+.page-main {
+  display: flex;
+  flex-direction: column;
+}
+
 .page-main--conf {
   article {
     margin-bottom: 100px;

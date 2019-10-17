@@ -49,6 +49,7 @@
 }
 
 .page-header__text {
+  display: block;
   margin: 0;
   font-size: 16px;
   @include media-xl {
@@ -80,6 +81,7 @@
 }
 
 .page-header__link-phone {
+  display: block;
   font-size: 16px;
   transition: opacity 0.3s;
   &:hover,
@@ -143,12 +145,14 @@
   display: flex;
   flex-direction: column;
   padding-top: 141px;
+  // overflow-x: hidden;
   &:after {
     content: "";
     position: absolute;
     top: 140px;
     right: -107px;
     display: block;
+    // display: none;
     width: 817px;
     height: 377px;
     background-image: url("../img/header-pseudo-img@desktop1x.png");
@@ -164,6 +168,10 @@
       right: -20px;
       width: 585px;
       height: 270px;
+      background-image: url("../img/header-pseudo-img@585x270.png");
+      @include pixel-ratio(double) {
+        background-image: url("../img/header-pseudo-img@1170x540.png");
+      }
     }
 
     @include media-lg {
@@ -177,6 +185,10 @@
       right: -50px;
       width: 542px;
       height: 250px;
+      background-image: url("../img/header-pseudo-img@542x250.png");
+      @include pixel-ratio(double) {
+        background-image: url("../img/header-pseudo-img@1084x500.png");
+      }
     }
 
     @include media-md {

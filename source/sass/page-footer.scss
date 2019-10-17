@@ -67,12 +67,16 @@
 }
 
 .page-footer__link-phone {
-  margin-bottom: 13px;
   margin-right: 45px;
+  @include media-md {
+    margin-bottom: 13px;
+  }
 }
 
 .page-footer__link-mail {
-  margin-bottom: 13px;
+  @include media-md {
+    margin-bottom: 13px;
+  }
 }
 
 .page-footer__text {

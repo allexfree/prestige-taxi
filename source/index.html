@@ -104,7 +104,7 @@
               <use xlink:href="img/sprite/sprite.svg#list-marker"></use>
             </svg>
           </li>
-          <li class="page-header__list-item">Все автомобили не старше 3х лет
+          <li class="page-header__list-item">Все автомобили не старше 5 лет
             <svg width="15" height="10">
               <use xlink:href="img/sprite/sprite.svg#list-marker"></use>
             </svg>
@@ -271,14 +271,20 @@
             </h3>
             <div class="card-auto__content">
               <figure>
-                <img class="card-auto__img" src="img/optima.png" srcset="img/optima@2x.png 2x" width="251" height="115"
-                  alt="Тариф Стандарт | KIA Optima">
+                <picture>
+                  <source type="image/webp" srcset="img/optima@2x.webp 2x, img/optima.webp 1x">
+                  <img class="card-auto__img" src="img/optima.png" srcset="img/optima@2x.png 2x" width="251"
+                    height="115" alt="Тариф Стандарт | KIA Optima">
+                </picture>
                 <figcaption>KIA Optima</figcaption>
               </figure>
               <a class="btn-common card-auto__btn callback-btn-js" href="#callback">Стандарт</a>
               <figure>
-                <img class="card-auto__img" src="img/camry.png" srcset="img/camry@2x.png 2x" width="251" height="115"
-                  alt="Тариф Стандарт | TOYOTA Camry">
+                <picture>
+                  <source type="image/webp" srcset="img/camry@2x.webp 2x, img/camry.webp 1x">
+                  <img class="card-auto__img" src="img/camry.png" srcset="img/camry@2x.png 2x" width="251" height="115"
+                    alt="Тариф Стандарт | TOYOTA Camry">
+                </picture>
                 <figcaption>TOYOTA Camry</figcaption>
               </figure>
             </div>
@@ -289,8 +295,11 @@
             </h3>
             <div class="card-auto__content">
               <figure>
-                <img class="card-auto__img" src="img/miniven.png" srcset="img/miniven@2x.png 2x" width="251"
-                  height="115" alt="Тариф Минивэн | Минивэн 8 мест">
+                <picture>
+                  <source type="image/webp" srcset="img/miniven@2x.webp 2x, img/miniven.webp 1x">
+                  <img class="card-auto__img" src="img/miniven.png" srcset="img/miniven@2x.png 2x" width="251"
+                    height="115" alt="Тариф Минивэн | Минивэн 8 мест">
+                </picture>
                 <figcaption>Минивэн 8 мест</figcaption>
               </figure>
               <a class="btn-common card-auto__btn callback-btn-js" href="#callback">Минивэн</a>
@@ -302,14 +311,20 @@
             </h3>
             <div class="card-auto__content">
               <figure>
-                <img class="card-auto__img" src="img/mercedes.png" srcset="img/mercedes@2x.png 2x" width="251"
-                  height="115" alt="Тариф Бизнес | Mercedes-Benz E-class">
+                <picture>
+                  <source type="image/webp" srcset="img/mercedes@2x.webp 2x, img/mercedes.webp 1x">
+                  <img class="card-auto__img" src="img/mercedes.png" srcset="img/mercedes@2x.png 2x" width="251"
+                    height="115" alt="Тариф Бизнес | Mercedes-Benz E-class">
+                </picture>
                 <figcaption>Mercedes-Benz E-class</figcaption>
               </figure>
               <a class="btn-common card-auto__btn callback-btn-js" href="#callback">Бизнес</a>
               <figure>
-                <img class="card-auto__img" src="img/bmw.png" srcset="img/bmw@2x.png 2x" width="251" height="115"
-                  alt="Тариф Бизнес | BMW 5 series">
+                <picture>
+                  <source type="image/webp" srcset="img/bmw@2x.webp 2x, img/bmw.webp 1x">
+                  <img class="card-auto__img" src="img/bmw.png" srcset="img/bmw@2x.png 2x" width="251" height="115"
+                    alt="Тариф Бизнес | BMW 5 series">
+                </picture>
                 <figcaption>BMW 5 series</figcaption>
               </figure>
             </div>
@@ -322,7 +337,7 @@
           По вопросам, связанным с нашей работой, пожалуйста, воспользуйтесь формой обратной связи
         </p>
 
-        <form class="main-feedback__form" action="#" method="POST">
+        <form id="form-feedback" class="main-feedback__form" action="#" method="POST">
 
           <input type="hidden" name="project_name" value="prestige-taxi24.ru">
           <!-- value="prestige-taxi24@yandex.ru" -->
@@ -331,9 +346,9 @@
 
           <fieldset>
             <div class="main-feedback-form__group">
-              <input class="main-feedback-form__input" type="text" name="Имя"
+              <input class="main-feedback-form__input" type="text" name="Имя юзера"
                 pattern="(^[a-zа-яA-ZА-Я][a-zа-яA-ZА-Я0-9-_\.\s]{1,20}$)" placeholder="Ввведите Ваше имя">
-              <input class="main-feedback-form__input" type="tel" name="Номер телефона" pattern="(\+?\d[- .]*){7,13}"
+              <input class="main-feedback-form__input" type="tel" name="Телефон" pattern="(\+?\d[- .]*){7,13}"
                 placeholder="Введите Ваш номер телефона" required>
             </div>
           </fieldset>
@@ -353,15 +368,15 @@
   <footer class="page-footer">
     <div class="container">
       <div class="page-footer__wrapper">
-          <div class="page-footer__logo-wrapper">
-        <a class="logo logo--footer">
-          <svg width="8" height="8">
-            <use xlink:href="img/sprite/sprite.svg#copyright"></use>
-          </svg>
-          <img src="img/icons/logo.svg" width="70" height="14" alt="Логотип Prestige taxi">
-          <span>, 2019</span>
-        </a>
-      </div>
+        <div class="page-footer__logo-wrapper">
+          <a class="logo logo--footer">
+            <svg width="8" height="8">
+              <use xlink:href="img/sprite/sprite.svg#copyright"></use>
+            </svg>
+            <img src="img/icons/logo.svg" width="70" height="14" alt="Логотип Prestige taxi">
+            <span>, 2019</span>
+          </a>
+        </div>
 
         <ul class="page-footer__list">
           <li class="page-footer__list-item">
@@ -386,7 +401,7 @@
     </div>
   </footer>
 
-  <div class="hidden">
+  <div class="popup-overlay">
     <form id="callback" class="form-callback lightSpeedIn" action="#" method="POST">
       <div class="form-callback__wrapper">
         <p class="form-callback__title">Менеджер свяжется с Вами в течение 15 минут </p>
@@ -409,17 +424,14 @@
               rel="noopener">политикой конфиденциальности</a> ознакомлен(а) и даю свое согласие на обработку моих
             персональных данных</label>
         </div>
+        <button class="form-callback__btn-close btn-close-form-js" type="button" aria-label="Закрыть форму"><span></span></button>
       </div>
     </form>
   </div>
 
-  <!-- <script defer type="text/javascript" src="https://spikmi.com/Widget?Id=1857"></script> -->
-
-
   <link rel="stylesheet" href="css/style.min.css">
 
   <script defer src="vendor/jquery.min.js"></script>
-  <script defer src="vendor/magnific-popup.min.js"></script>
   <script defer src="vendor/svgxuse/svgxuse.min.js"></script>
   <script defer src="vendor/swiper.min.js"></script>
 
@@ -427,6 +439,7 @@
 
   <script defer src="js/main-menu.min.js"></script>
   <script defer src="js/callback-popup.min.js"></script>
+  <script defer src="js/mail.min.js"></script>
 </body>
 
 </html>

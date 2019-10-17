@@ -18,11 +18,21 @@
       padding-left: 29px;
       svg {
         left: 0;
+        @include media-xl {
+          left: -25px;
+        }
+      }
+
+      @include media-xl {
+        padding-left: 0;
       }
     }
 
     .card-tariff__content {
       padding-right: 24px;
+      @include media-xl {
+        padding-right: 0;
+      }
     }
   }
 
@@ -32,6 +42,13 @@
       padding-left: 20px;
       svg {
         left: -10px;
+        @include media-xl {
+          left: -25px;
+        }
+      }
+
+      @include media-xl {
+        padding-left: 0;
       }
     }
 
@@ -65,7 +82,7 @@
 
 .card-tariff__title {
   position: relative;
-  max-width: 100px;
+  max-width: 120px;
   margin: 0;
   margin-bottom: 49px;
   font-size: 21px;
@@ -116,6 +133,10 @@
     padding-left: 20px;
     margin: 0;
     color: $fourth-color;
+  }
+
+  @include media-xl {
+    padding-left: 0;
   }
 
   @include media-lg {

@@ -27,7 +27,7 @@
   <nav class="main-menu menu-js">
     <ul class="main-menu__list">
       <li class="main-menu__list-item">
-        <a href="index.html" class="main-menu__list-link">Главная</a>
+        <a href="index.html" class="main-menu__list-link main-menu__list-link--conf">Главная</a>
         <svg width="15" height="10">
           <use xlink:href="img/sprite/sprite.svg#list-marker"></use>
         </svg>
@@ -116,13 +116,15 @@
   <footer class="page-footer">
     <div class="container">
       <div class="page-footer__wrapper">
-        <a href="index.html" class="logo logo--footer">
-          <svg width="8" height="8">
-            <use xlink:href="img/sprite/sprite.svg#copyright"></use>
-          </svg>
-          <img src="img/icons/logo.svg" width="70" height="14" alt="Логотип Prestige taxi">
-          <span>, 2019</span>
-        </a>
+        <div class="page-footer__logo-wrapper">
+          <a href="index.html" class="logo logo--footer">
+            <svg width="8" height="8">
+              <use xlink:href="img/sprite/sprite.svg#copyright"></use>
+            </svg>
+            <img src="img/icons/logo.svg" width="70" height="14" alt="Логотип Prestige taxi">
+            <span>, 2019</span>
+          </a>
+        </div>
 
         <ul class="page-footer__list">
           <li class="page-footer__list-item">
@@ -147,8 +149,8 @@
     </div>
   </footer>
 
-  <div class="hidden">
-    <form id="callback" action="#" method="POST">
+  <div class="popup-overlay">
+    <form id="callback" class="form-callback lightSpeedIn" action="#" method="POST">
       <div class="form-callback__wrapper">
         <p class="form-callback__title">Менеджер свяжется с Вами в течение 15 минут </p>
 
@@ -161,14 +163,23 @@
         <input class="form-callback__input" type="tel" name="Номер телефона" pattern="(\+?\d[- .]*){7,13}"
           placeholder="Введите Ваш номер телефона" required>
 
-        <button class="btn-common form-callback__btn" type="submit"><span>Отправить</span></button>
+        <button class="btn-common form-callback__btn btn-callback-js" type="submit"
+          disabled><span>Отправить</span></button>
+
+        <div class="form-callback__group">
+          <input id="checkbox-input" class="form-callback__input-checkbox" type="checkbox">
+          <label class="form-callback__label" for="checkbox-input">С <a href="conf.html" target="_blank"
+              rel="noopener">политикой конфиденциальности</a> ознакомлен(а) и даю свое согласие на обработку моих
+            персональных данных</label>
+        </div>
+
+        <button class="form-callback__btn-close btn-close-form-js" type="button" aria-label="Закрыть форму"><span></span></button>
       </div>
     </form>
 
     <link rel="stylesheet" href="css/style.min.css">
 
     <script defer src="vendor/jquery.min.js"></script>
-    <script defer src="vendor/magnific-popup.min.js"></script>
     <script defer src="vendor/svgxuse/svgxuse.min.js"></script>
     <script defer src="vendor/swiper.min.js"></script>
 

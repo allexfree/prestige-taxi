@@ -134,6 +134,7 @@
   position: relative;
   display: block;
   max-width: 600px;
+  max-height: 600px;
   margin: auto;
   padding: 75px 45px;
   background-color: $third-color;
@@ -229,6 +230,8 @@
 
 .form-callback__label {
   position: relative;
+  display: block;
+  width: 473px;
   letter-spacing: 0.05em;
   a {
     color: $fourth-color;
@@ -257,11 +260,87 @@
     transform: translateY(-50%);
     transition: background-color 0.3s;
   }
+
+  @include media-md {
+    width: 100%;
+  }
 }
 
 .form-callback__input-checkbox {
   display: none;
   &:checked + .form-callback__label:before {
     background-color: $fourth-color;
+  }
+}
+
+.form-callback__btn-close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  display: block;
+  padding: 0;
+  padding: 5px;
+  border: none;
+  background-color: transparent;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+  span {
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-color: $fifth-color;
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: 5px;
+      height: 5px;
+      background-color: $fourth-color;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      display: block;
+      width: 5px;
+      height: 5px;
+      background-color: $fourth-color;
+    }
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-color: $fourth-color;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-color: $fourth-color;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+
+  @include media-xs {
+    top: 15px;
+    right: 15px;
   }
 }
