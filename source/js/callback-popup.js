@@ -1,7 +1,6 @@
 'use strict';
 
 (function () {
-
   $(window).on('resize', function () {
     let win = $(this);
     if (win.width() > 769 && !$('.form-callback').hasClass('lightSpeedIn')) {
@@ -52,7 +51,5 @@
         $('.btn-callback-js').attr('disabled', 'disabled');
       }
     });
-
   });
-
 })();
